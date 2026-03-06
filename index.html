@@ -21,20 +21,16 @@
   </head>
   <body>
     <div class="box">
-      <button onclick="openApp()">打开链接</button>
+      <h4>Authentication successful, redirecting to the app</h4>
     </div>
   </body>
   <script>
-    function openApp() {
-      // 尝试打开holo
+    ;(function () {
       let code = new URLSearchParams(window.location.search).get("code")
-      
-      window.location.href = "holo://auth/callback?code=" + code
-
-      // 如果app未安装，可以跳转到应用商店
-      //   setTimeout(function () {
-      //     window.location.href = "https://apps.apple.com/cn/app/wechat/id414478248"
-      //   }, 1000)
-    }
+      setTimeout(function () {
+        // 尝试打开链接
+        window.location.href = "holo://auth/callback?code=" + code
+      }, 1000)
+    })()
   </script>
 </html>
