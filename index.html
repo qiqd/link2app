@@ -26,8 +26,10 @@
   </body>
   <script>
     function openApp() {
-      // 尝试打开微信
-      window.location.href = "holo://auth/callback"
+      // 尝试打开holo
+      let code = new URLSearchParams(window.location.search).get("code")
+      
+      window.location.href = "holo://auth/callback?code=" + code
 
       // 如果app未安装，可以跳转到应用商店
       //   setTimeout(function () {
