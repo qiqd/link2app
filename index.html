@@ -29,7 +29,7 @@
       let code = new URLSearchParams(window.location.search).get("code")
       setTimeout(function () {
         // 尝试打开链接
-        window.location.href = "holo://auth/callback?code=" + code
+        window.location.href = "holo://account/auth?code=" + code
       }, 1000)
     })()
   </script>
