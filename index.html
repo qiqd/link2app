@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box {
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      button {
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <button onclick="openApp()">打开链接</button>
+    </div>
+  </body>
+  <script>
+    function openApp() {
+      // 尝试打开微信
+      window.location.href = "weixin://"
+
+      // 如果app未安装，可以跳转到应用商店
+      //   setTimeout(function () {
+      //     window.location.href = "https://apps.apple.com/cn/app/wechat/id414478248"
+      //   }, 1000)
+    }
+  </script>
+</html>
